@@ -73,3 +73,28 @@ main()
                             &cliente[i] .ultimopago.anio);
         return;
     }
+}
+void escribirsalida(int i)
+{
+    printf("\nNombre: %s", cliente[i].nombre);
+    printf("    Numero de cuenta: %d\n", cliente[i].num_cuenta);
+    printf("Calle: %s\n", cliente[i].calle);
+    printf("Ciudad: %s\n\n", cliente[i].ciudad);
+    printf("Saldo anterior: %7.2f", cliente[i].anteriorsaldo);
+    printf("    Pago actual: %7.2f", cliente[i].pago);
+    printf("    Nuevo saldo: %7.2f\n\n", cliente[i].nuevosaldo);
+    printf("Estado de la cuenta: ");
+
+    switch (cliente[i].tipo_cuenta){
+    case 'A':
+                    printf("AL DIA\n\n");
+                    break;
+    case 'R':
+                    printf("ATRASADA\n\n");
+                    break;
+    case 'D':
+                    printf("DELINCUENTE\n\n");
+                    break;
+    }
+    return;
+}
