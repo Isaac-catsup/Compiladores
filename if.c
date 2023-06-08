@@ -11,7 +11,7 @@ int main(void)
     else if ( c >= '0' && c <= '9')
         printf ("It's a digit.\n");
     else
-        printf("It's a special character.\n");
+        printf("It's a special digit.\n");
 
     return 0; 
 }
